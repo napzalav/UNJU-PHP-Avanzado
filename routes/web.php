@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
     // echo "<h1>Pantalla principal del sitio web</h1>";
 });
 
