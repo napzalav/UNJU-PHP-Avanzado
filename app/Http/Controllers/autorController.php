@@ -11,7 +11,7 @@ class autorController extends Controller
     }
 
     public function create() {
-        return '<h1>alta de autor</h1>';
+        return view ('createAutor');
     }
 
     public function edit() {
