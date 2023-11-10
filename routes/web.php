@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\autorController;
+use App\Http\Controllers\AutoresController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\noticiaController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NoticiasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,33 +17,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-    // echo "<h1>Pantalla principal del sitio web</h1>";
-});
+Route::get("/", [HomeController::class,"index"])->name("inicio");
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 Route::get('/saludos', function () {
-    return 'saludos';
+    return 'saluditos desde PHP';
 });
 
 // =============== NOTICIAS ==================
-//si quiero mostrar la VISTA de noticias
-Route::get('/noticias', function () {
-    return view('noticias');
+Route::controller(NoticiasController::class)->group(function(){
+    Route::get('noticias', 'index')->name('index');
+    Route::get('noticia/{slug}','noticia')->name('noticia');
 });
-// Route::get('noticias', [noticiasController::class,'allNoticias'])->name('noticias');
-Route::get('noticias/create', [noticiaController::class,'create'])->name('create');
-Route::get('noticias/edit', [noticiaController::class,'edit'])->name('edit');
-Route::get('noticias/detail', [noticiaController::class,'detail'])->name('detail');
+//si quiero mostrar la VISTA de noticias
+// Route::get('/noticias', function () {
+//     return view('noticias.index');
+// });
+
+// Route::get('noticias/create', [NoticiasController::class,'create'])->name('create');
+// Route::get('noticias/edit', [NoticiasController::class,'edit'])->name('edit');
+// Route::get('noticias/detail', [NoticiasController::class,'detail'])->name('detail');
 
 // =============== AUTORES ==================
-//si quiero mostrar la VISTA de autores
-Route::get('/autores', function () {
-    return view('autores');
+Route::controller(AutoresController::class)->group(function(){
+    Route::get('autores','index')->name('index');
+    Route::get('autores/create','create')->name('create');
+    Route::get('autores/edit/{id}','edit')->name('edit');
 });
-Route::get('autores/create', [autorController::class,'create'])->name('create');
-Route::get('autores/edit', [autorController::class,'edit'])->name('edit');
-Route::get('autores/detail', [autorController::class,'detail'])->name('detail');
+//si quiero mostrar la VISTA de autores
+// Route::get('/autores', function () {
+//     return view('autores.index');
+// });
+
+// Route::get('autores/create', [autorController::class,'create'])->name('create');
+// Route::get('autores/edit', [autorController::class,'edit'])->name('edit');
+// Route::get('autores/detail', [autorController::class,'detail'])->name('detail');
 
 
 Route::get('blog', [BlogController::class,'index'])->name('blog');
