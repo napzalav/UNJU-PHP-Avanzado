@@ -10,8 +10,19 @@ background-image: url(&quot;data:image/svg+xml,<svg id='patternId' width='100%' 
 
 @section('title', 'Noticias')
 @section('content')
-    {{-- aqui empieza Card con Bootstrap--}}
-    <div class="card" style="width: 18rem;">
+
+    <div class="card mb-3">
+        <img class="card-img-top" src="https://www.clarin.com/img/2013/10/06/H1Av6nKNx_312x240.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-primary">Ver detalle</a>
+        </div>
+    </div>
+    {{-- aqui empieza Card con Bootstrap --}}
+    {{-- <div class="card" style="width: 18rem;">
         <img src="https://www.clarin.com/img/2013/10/06/H1Av6nKNx_312x240.jpg" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">Noticia</h5>
@@ -19,6 +30,6 @@ background-image: url(&quot;data:image/svg+xml,<svg id='patternId' width='100%' 
         <p class="card-text"><small class="text-body-secondary">Fecha de publicación:</small></p>
         <a href="#" class="btn btn-primary">Ver detalle</a>
         </div>
-    </div>
-{{-- fin Card bootstrap--}}
+    </div> --}}
+    {{-- fin Card bootstrap --}}
 @endsection
