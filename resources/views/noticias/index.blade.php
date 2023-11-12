@@ -32,7 +32,7 @@ background-image: url(&quot;data:image/svg+xml,<svg id='patternId' width='100%' 
             <tbody>
                 @foreach ($noticias as $noticia)
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $noticia['id'] }}</th>
                     <td>01-01-1990</td>
                     <td>{{ $noticia['title'] }}</td>
                     <td>{{ $noticia['slug'] }} </td>
