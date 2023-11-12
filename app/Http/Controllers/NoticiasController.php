@@ -24,7 +24,7 @@ class NoticiasController extends Controller
      */
     public function create()
     {
-        //
+        return view ('noticias.createNoticia');
     }
 
     /**

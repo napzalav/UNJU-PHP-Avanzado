@@ -92,7 +92,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="/noticias" role="button" data-bs-toggle="dropdown" aria-expanded="false">Noticias</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Crear Noticia</a></li>
+                                <li><a class="dropdown-item" href="/noticia/create">Crear Noticia</a></li>
                                 {{-- <li><a class="dropdown-item" href="#">Editar Noticia</a></li> --}}
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="/noticias">VER TODAS LAS NOTICIAS</a></li>

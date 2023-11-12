@@ -29,7 +29,8 @@ Route::get('/saludos', function () {
 // =============== NOTICIAS ==================
 Route::controller(NoticiasController::class)->group(function(){
     Route::get('noticias', 'index')->name('index');
-    Route::get('noticia/{slug}','noticia')->name('noticia');
+    Route::get('noticias/create', 'create')->name('create');
+    Route::get('noticias/{slug}','noticia')->name('noticia');
 });
 //si quiero mostrar la VISTA de noticias
 // Route::get('/noticias', function () {
