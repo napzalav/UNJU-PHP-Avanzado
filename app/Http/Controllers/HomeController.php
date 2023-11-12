@@ -11,7 +11,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view("home.index");
+        $noticias = array(
+            ['id' => 1,'title'=> 'Aprender Laravel', 'slug' => 'aprender-laravel', 'cuerpo' => 'Laravel es un framework de código abierto para desarrollar aplicaciones y servicios web con PHP 5, PHP 7 y PHP 8.', 'imagen' => 'https://miro.medium.com/v2/resize:fit:1400/1*m0s2io11J82PR7miqan92w.png'],
+            ['id' => 2,'title'=> 'Aprender Tailwind', 'slug' => 'aprender-tailwind', 'cuerpo' => 'Tailwind CSS es un framework de CSS de código abierto​ para el diseño de páginas web. ', 'imagen' => 'https://vabadus.es/images/cache/imagen_nodo/images/articulos/64b524021adc5990918944.png'],
+            ['id' => 3, 'title'=> 'Aprender Bootstrap', 'slug' =>'aprender-bootstrap', 'cuerpo' => 'Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.', 'imagen'=> 'https://getbootstrap.com/docs/5.3/assets/img/bootstrap-icons.png']
+        );
+        return view('home.index', ['noticias'=> $noticias]);
     }
 
     /**
