@@ -76,7 +76,7 @@
             </div>
         </nav> --}}
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand" href="https://github.com/napzalav" target="_blank">Cesar Alavila</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,27 +87,33 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
+                    </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/noticias" role="button" data-bs-toggle="dropdown" aria-expanded="false">Noticias</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/noticias/create">Crear Noticia</a></li>
-                                {{-- <li><a class="dropdown-item" href="#">Editar Noticia</a></li> --}}
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/noticias">VER TODAS LAS NOTICIAS</a></li>
-                            </ul>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/noticias" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Noticias</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/noticias/create">Crear Noticia</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Editar Noticia</a></li> --}}
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/noticias">VER TODAS LAS NOTICIAS</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Autores</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/autores/create">Crear Autor</a></li>
-                                {{-- <li><a class="dropdown-item" href="/autores/edit">Editar Autor</a></li> --}}
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/autores">VER TODOS LOS AUTORES</a></li>
-                            </ul>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Autores</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/autores/create">Crear Autor</a></li>
+                            {{-- <li><a class="dropdown-item" href="/autores/edit">Editar Autor</a></li> --}}
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/autores">VER TODOS LOS AUTORES</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 {{-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

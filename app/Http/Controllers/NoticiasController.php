@@ -19,6 +19,11 @@ class NoticiasController extends Controller
         return view('noticias.index', ['noticias'=> $noticias]);
     }
 
+    public function detail($noticia = '')
+    {
+        return view('noticias.details', ['noticia' => $noticia]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

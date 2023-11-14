@@ -30,8 +30,11 @@ Route::get('/saludos', function () {
 Route::controller(NoticiasController::class)->group(function(){
     Route::get('noticias', 'index')->name('index');
     Route::get('noticias/create', 'create')->name('create');
-    Route::get('noticias/{slug}','noticia')->name('noticia');
+    Route::get('noticias/{slug}','detail')->name('noticia');
+    // Route::get('noticias/details','details')->name('details');
 });
+
+// Route::get('noticias/{slug}', [NoticiasController::class,'detail']);
 //si quiero mostrar la VISTA de noticias
 // Route::get('/noticias', function () {
 //     return view('noticias.index');
